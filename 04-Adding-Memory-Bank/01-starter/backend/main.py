@@ -75,12 +75,7 @@ AGENT_ENGINE_ID = os.getenv("AGENT_ENGINE_ID")
 
 if AGENT_ENGINE_ID:
     logger.info(f"Using Agent Engine ID: {AGENT_ENGINE_ID}")
-    session_service = VertexAiSessionService(
-        project=PROJECT_ID, location=LOCATION, agent_engine_id=AGENT_ENGINE_ID
-    )
-    memory_service = VertexAiMemoryBankService(
-        project=PROJECT_ID, location=LOCATION, agent_engine_id=AGENT_ENGINE_ID
-    )
+    # TODO: Create Vertex AI Session Service & Memory Bank Service
 else:
     logger.warning("AGENT_ENGINE_ID not found. Falling back to InMemory services.")
     from google.adk.sessions import InMemorySessionService

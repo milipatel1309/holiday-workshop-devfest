@@ -83,18 +83,9 @@ if AGENT_ENGINE_ID:
     )
 else:
     logger.warning("AGENT_ENGINE_ID not found. Falling back to InMemory services.")
-    from google.adk.sessions import InMemorySessionService
-    from google.adk.memory import InMemoryMemoryService
-    session_service = InMemorySessionService()
-    memory_service = InMemoryMemoryService()
+    # TODO: Create Session Service
 
-# Initialize Runner
-runner = Runner(
-    app_name="agents",
-    agent=christmas_agent,
-    session_service=session_service,
-    memory_service=memory_service,
-)
+# TODO: Initialize Runner
 
 # Global variable to store the current session ID
 CURRENT_SESSION_ID = None
