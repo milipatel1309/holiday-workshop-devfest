@@ -123,10 +123,7 @@ async def chat_endpoint(
         if not session:
             try:
                 t0 = time.time()
-                if isinstance(session_service, VertexAiSessionService):
-                     session = await session_service.create_session(app_name="agents", user_id=user_id)
-                else:
-                     session = await session_service.create_session(app_name="agents", session_id="demo_session", user_id=user_id)
+                session = await session_service.create_session(app_name="agents", session_id="demo_session", user_id=user_id)
                 
                 logger.info(f"Session creation took {time.time() - t0:.4f}s")
                 CURRENT_SESSION_ID = session.id
