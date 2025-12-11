@@ -67,8 +67,20 @@ def generate_sweater_pattern(motif: str) -> str:
     Args:
         motif: A description of the pattern on the sweater (e.g., "snowflake pattern", "reindeer pattern").
     """
-    
-    #REPLACE_GENERATE_SWEATER_PATTERN
+    prompt = (
+        f"""
+        Design a seamless, tileable "ugly holiday sweater" pattern.
+        The design should mimic a knitted wool texture with visible stitching details.
+        Use a chaotic but festive color palette (reds, greens, whites, golds).
+        The main motif on the design should be: {motif}
+        
+        View: Top-down, flat 2D texture map. 
+        Do NOT show a shirt, a model, or folds. Show ONLY the rectangular pattern design.
+        """
+    )
+    generate_image(prompt, "1:1", "static/generated_pattern.png")
+    return "Done! Saved at generated_pattern.png"
+
 
 def analyze_person_features(image_path: str) -> str:
     """
@@ -110,7 +122,7 @@ def analyze_person_features(image_path: str) -> str:
     return "a happy person"
 
 @mcp.tool
-def generate_wearing_sweater(pattern_description: str = "festive holiday pattern", image_path: str = None) -> str:
+def generate_wearing_sweater(image_path: str = None) -> str:
     """
     Generate a cute, kawaii, cartoon-style character wearing a sweater with the specified pattern.
     
@@ -118,7 +130,29 @@ def generate_wearing_sweater(pattern_description: str = "festive holiday pattern
         image_path: Optional absolute path to an uploaded photo of the user. If provided, the avatar will resemble the user.
     """
     
-    #REPLACE_GENERATE_WEARING_SWEATER
+    person_description = "a happy person"
+    if image_path:
+        person_description = analyze_person_features(image_path)
+        
+    prompt = (
+        f"""
+        Generate a cute, kawaii, cartoon-style 3D render of {person_description} wearing a knitted sweater.
+        
+        Sweater Pattern: Use the pattern in the attached image.
+        
+        Style:
+        - Cute, chibi, or cartoon aesthetic.
+        - Bright, cheerful colors.
+        - Soft lighting, high fidelity 3D render (like a high-quality toy or animation character).
+        - The character should be facing the camera and smiling.
+        - The character should resemble the description: {person_description}
+        
+        Background: Simple, festive, or winter-themed background that complements the character.
+        """
+    )
+    
+    generate_image(prompt, "1:1", "static/generated_selfie.png", ["static/generated_pattern.png"])
+    return "Done! Saved at generated_selfie.png"
 
 @mcp.tool
 def generate_final_photo() -> str:
