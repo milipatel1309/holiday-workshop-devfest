@@ -1,49 +1,35 @@
-# Smart Christmas Tree Backend
+# Workshop Step 4: Adding Memory Bank (Solution Backend)
 
-This is the backend service for the Smart Christmas Tree application, powered by Google Vertex AI and the Agent Development Kit (ADK).
+This is the **Completed Solution Backend** for the "Adding Memory Bank" workshop step.
 
-## Prerequisites
+It runs a Python Agents Development Kit (ADK) Agent that uses an MCP Server to interact with the frontend and a "Memory Bank" to persist context.
 
-- Python 3.11+
-- `uv` (Python package installer and runner)
-- Google Cloud SDK (`gcloud`) authenticated with a project that has Vertex AI enabled.
+## 🛠️ Prerequisites
 
-## Setup
+-   Python 3.10+
+-   `uv` (recommended for dependency management)
+-   Gemini API Key
 
-1.  **Environment Variables**:
-    Ensure you have a `.env` file in this directory with the following variables:
-    ```env
-    PROJECT_ID=your-google-cloud-project-id
-    LOCATION=us-central1
-    AGENT_ENGINE_ID=your-agent-engine-id
-    GOOGLE_API_KEY=your-gemini-api-key
-    ```
+## 🚀 How to Run
 
-2.  **Agent Engine Registration**:
-    If you haven't registered an Agent Engine yet (or if `AGENT_ENGINE_ID` is missing), run the deployment script:
+1.  **Install Dependencies:**
     ```bash
-    uv run deploy_agent.py
+    uv sync
     ```
-    This script will:
-    - Initialize Vertex AI.
-    - Create an Agent Engine resource.
-    - Output the `AGENT_ENGINE_ID` which you must add to your `.env` file.
 
-## Running the Backend
+2.  **Environment Setup:**
+    Ensure you have a `.env` file with your `GOOGLE_API_KEY`.
 
-To start the backend server with hot-reloading:
+3.  **Run the App:**
+    Use the provided script to start both the MCP Server and the Agent.
+    ```bash
+    ./start_app.sh
+    ```
+    *(Or `python main.py` if running manually)*
 
-```bash
-uv run uvicorn main:app --reload --port 8001
-```
+## 🧠 Architecture
 
-The API will be available at `http://localhost:8001`.
-
-## API Endpoints
-
--   `POST /api/chat`: Send a message to the Christmas Tree Agent.
--   `GET /api/state`: Get the current visual state of the tree.
-
-
-frontend/
- npm run dev
+-   **`agent.py`**: Defines the ADK Agent logic, including tools and model configuration.
+-   **`mcp_server.py`**: A FastMCP server that exposes tools to the Agent (Pattern Generation, Photo Taking).
+-   **`main.py`**: connect the agent and the mcp server.
+-   **Memory Bank**: Implements the context storage and retrieval mechanism.
