@@ -39,6 +39,17 @@ uv run uvicorn main:app --reload --port 8001
 
 The API will be available at `http://localhost:8001`.
 
+## 📂 Project Structure
+
+-   `agent.py`: Defines the Agent using the ADK.
+-   `main.py`: Entry point for the FastAPI server.
+-   `mcp_server.py`: The Model Context Protocol (MCP) server for tool execution.
+
+## 🔧 Troubleshooting
+
+-   **Google Cloud Auth**: If you see auth errors, try running `gcloud auth application-default login`.
+-   **Port Conflicts**: Ensure port 8001 is free. You can change it in the run command if needed.
+
 ## API Endpoints
 
 -   `POST /api/chat`: Send a message to the Christmas Tree Agent.

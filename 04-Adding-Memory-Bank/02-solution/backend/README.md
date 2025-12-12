@@ -33,3 +33,9 @@ It runs a Python Agents Development Kit (ADK) Agent that uses an MCP Server to i
 -   **`mcp_server.py`**: A FastMCP server that exposes tools to the Agent (Pattern Generation, Photo Taking).
 -   **`main.py`**: connect the agent and the mcp server.
 -   **Memory Bank**: Implements the context storage and retrieval mechanism.
+
+## 🔧 Troubleshooting
+
+-   **Google Cloud Auth**: If you see auth errors, try running `gcloud auth application-default login`.
+-   **Port Conflicts**: Ensure port 8001 is free. You can change it in the run command if needed.
+-   **Env Helper**: If `deploy_agent.py` fails to save env vars, verify file permissions.
