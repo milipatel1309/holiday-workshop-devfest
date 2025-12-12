@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="3" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="shortTermGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="longTermGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8E1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFECB3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="475" y="40" fill="#37474F" font-size="28" font-weight="bold" text-anchor="middle">Memory Architecture</text>
+  <text x="475" y="65" fill="#78909C" font-size="16" text-anchor="middle">Short-Term vs. Long-Term Memory in backend/main.py</text>
+
+  <!-- =========================================
+       The Agent (Center)
+       ========================================= -->
+  <g transform="translate(375, 400)">
+     <circle cx="100" cy="50" r="40" fill="#81C784" stroke="#4CAF50" stroke-width="3"/>
+     <text x="100" y="58" font-size="30" text-anchor="middle">🤖</text>
+     <text x="100" y="110" fill="#2E7D32" font-size="16" font-weight="bold" text-anchor="middle">The Agent</text>
+     <text x="100" y="130" fill="#4CAF50" font-size="12" text-anchor="middle">google.adk.runner</text>
+  </g>
+
+  <!-- Connector Lines -->
+  <!-- To Short Term -->
+  <path d="M420,430 C350,430 300,380 250,350" fill="none" stroke="#2196F3" stroke-width="3" stroke-dasharray="5,5"/>
+  <!-- To Long Term -->
+  <path d="M530,430 C600,430 650,380 700,350" fill="none" stroke="#FFA000" stroke-width="3" stroke-dasharray="5,5"/>
+
+
+  <!-- =========================================
+       LEFT: SHORT TERM MEMORY (Session)
+       ========================================= -->
+  <g transform="translate(50, 100)">
+    <!-- Card -->
+    <rect x="0" y="0" width="380" height="300" rx="20" fill="url(#shortTermGradient)" stroke="#64B5F6" stroke-width="3" filter="url(#softShadow)"/>
+    
+    <!-- Icon -->
+    <circle cx="50" cy="50" r="25" fill="#FFFFFF" stroke="#64B5F6" stroke-width="2"/>
+    <text x="50" y="58" font-size="24" text-anchor="middle">💭</text>
+
+    <!-- Header -->
+    <text x="90" y="45" fill="#1565C0" font-size="20" font-weight="bold">Short-Term Memory</text>
+    <text x="90" y="65" fill="#1E88E5" font-size="14">SessionService</text>
+
+    <!-- Content Box -->
+    <g transform="translate(20, 90)">
+        <rect width="340" height="190" rx="10" fill="rgba(255,255,255,0.6)"/>
+        
+        <!-- Feature 1 -->
+        <g transform="translate(15, 20)">
+            <text x="0" y="0" fill="#0D47A1" font-size="14" font-weight="bold">Scope:</text>
+            <text x="60" y="0" fill="#1565C0" font-size="14">Current conversation only</text>
+        </g>
+        
+        <!-- Feature 2 -->
+        <g transform="translate(15, 50)">
+            <text x="0" y="0" fill="#0D47A1" font-size="14" font-weight="bold">Class:</text>
+            <text x="60" y="0" fill="#1565C0" font-size="12" font-family="monospace">InMemorySessionService</text>
+        </g>
+        
+        <!-- Visual Analogy -->
+        <g transform="translate(15, 80)">
+             <rect width="310" height="90" rx="5" fill="#E3F2FD" stroke="#90CAF9" stroke-dasharray="4"/>
+             <text x="10" y="20" fill="#1565C0" font-size="12" font-style="italic">"Hello, I want a sweater!"</text>
+             <text x="10" y="40" fill="#1976D2" font-size="12" font-style="italic">"Sure, what kind?"</text>
+             <text x="10" y="60" fill="#1565C0" font-size="12" font-style="italic">"Red please."</text>
+             <text x="230" y="80" fill="#90CAF9" font-size="10" font-weight="bold">CLEARED AFTER CHAT</text>
+        </g>
+    </g>
+  </g>
+
+  <!-- =========================================
+       RIGHT: LONG TERM MEMORY (Memory Bank)
+       ========================================= -->
+  <g transform="translate(520, 100)">
+    <!-- Card -->
+    <rect x="0" y="0" width="380" height="300" rx="20" fill="url(#longTermGradient)" stroke="#FFB74D" stroke-width="3" filter="url(#softShadow)"/>
+    
+    <!-- Icon -->
+    <circle cx="50" cy="50" r="25" fill="#FFFFFF" stroke="#FFB74D" stroke-width="2"/>
+    <text x="50" y="58" font-size="24" text-anchor="middle">📚</text>
+
+    <!-- Header -->
+    <text x="90" y="45" fill="#E65100" font-size="20" font-weight="bold">Long-Term Memory</text>
+    <text x="90" y="65" fill="#F57C00" font-size="14">MemoryService (The Bank)</text>
+
+    <!-- Content Box -->
+    <g transform="translate(20, 90)">
+        <rect width="340" height="190" rx="10" fill="rgba(255,255,255,0.6)"/>
+        
+        <!-- Feature 1 -->
+        <g transform="translate(15, 20)">
+            <text x="0" y="0" fill="#E65100" font-size="14" font-weight="bold">Scope:</text>
+            <text x="60" y="0" fill="#EF6C00" font-size="14">Across ALL conversations</text>
+        </g>
+        
+        <!-- Feature 2 -->
+        <g transform="translate(15, 50)">
+            <text x="0" y="0" fill="#E65100" font-size="14" font-weight="bold">Class:</text>
+            <text x="60" y="0" fill="#EF6C00" font-size="12" font-family="monospace">VertexAiMemoryBankService</text>
+        </g>
+        
+        <!-- Visual Analogy -->
+        <g transform="translate(15, 80)">
+             <rect width="310" height="90" rx="5" fill="#FFF8E1" stroke="#FFE082"/>
+             <text x="10" y="20" fill="#E65100" font-size="12" font-weight="bold">Stored Facts:</text>
+             <text x="20" y="40" fill="#5D4037" font-size="12">Unknown User: "Red sweater preference"</text>
+             <text x="20" y="60" fill="#5D4037" font-size="12">Unknown User: "Has a pet dog"</text>
+             <text x="230" y="80" fill="#FFB74D" font-size="10" font-weight="bold">PERSISTED FOREVER</text>
+        </g>
+    </g>
+  </g>
+
+</svg>

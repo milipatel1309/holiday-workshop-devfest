@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Arrowhead Marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#90A4AE" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- LABELS -->
+  <text x="50" y="80"  fill="#78909C" font-size="12" font-weight="bold" letter-spacing="1">USER LAYER</text>
+  <text x="50" y="280" fill="#78909C" font-size="12" font-weight="bold" letter-spacing="1">APPLICATION</text>
+  <text x="50" y="600" fill="#78909C" font-size="12" font-weight="bold" letter-spacing="1">INFRASTRUCTURE</text>
+  <text x="50" y="820" fill="#78909C" font-size="12" font-weight="bold" letter-spacing="1">OBSERVABILITY</text>
+
+  <!-- =========================================
+       1. USER LAYER
+       ========================================= -->
+       
+  <!-- User Request Box -->
+  <g transform="translate(150, 60)">
+    <!-- Hard Shadow -->
+    <rect x="4" y="4" width="220" height="90" rx="15" fill="#FFE0B2"/>
+    <!-- Main Box -->
+    <rect width="220" height="90" rx="15" fill="#FFF3E0" stroke="#FFB74D" stroke-width="2"/>
+    <text x="20" y="30" fill="#E65100" font-size="12" font-weight="bold">USER REQUEST</text>
+    <text x="20" y="55" fill="#546E7A" font-size="14" font-style="italic">"I want a sweater</text>
+    <text x="20" y="75" fill="#546E7A" font-size="14" font-style="italic">like my last one!" 🎄</text>
+  </g>
+
+  <!-- Down Arrow from User -->
+  <line x1="260" y1="150" x2="260" y2="210" stroke="#B0BEC5" stroke-width="3" marker-end="url(#arrow)"/>
+
+
+  <!-- =========================================
+       2. APPLICATION LAYER
+       ========================================= -->
+
+  <!-- 2a. Backend / Runner (Orange Box) -->
+  <g transform="translate(150, 220)">
+    <!-- Hard Shadow -->
+    <rect x="5" y="5" width="250" height="220" rx="15" fill="#EEEEEE"/>
+    <!-- Main Box -->
+    <rect width="250" height="220" rx="15" fill="#FFFFFF" stroke="#FF9800" stroke-width="3"/>
+    
+    <!-- Header -->
+    <g transform="translate(20, 20)">
+        <circle cx="20" cy="20" r="20" fill="#FF9800"/>
+        <text x="12" y="26" font-size="20">🚀</text> <!-- Icon -->
+        <text x="50" y="18" fill="#333" font-size="16" font-weight="bold">Backend App</text>
+        <text x="50" y="38" fill="#666" font-size="12">FastAPI + ADK Runner</text>
+    </g>
+
+    <!-- Content -->
+    <text x="30" y="90" fill="#555" font-size="11">• Handles /api/chat</text>
+    <text x="30" y="110" fill="#555" font-size="11">• Manages Sessions</text>
+    <text x="30" y="130" fill="#555" font-size="11">• Orchestrates Agent Loop</text>
+
+    <!-- Sub-button -->
+    <g transform="translate(30, 160)">
+        <rect width="160" height="30" rx="15" fill="#FFE0B2" stroke="#FF9800"/>
+        <text x="25" y="20" fill="#E65100" font-size="11" font-weight="bold">Initialize & Run Agent →</text>
+    </g>
+  </g>
+  
+  <!-- Connector: Backend to Agent -->
+  <path d="M 400 300 L 450 300" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+
+  <!-- 2b. Agent (Blue Box) -->
+  <g transform="translate(450, 220)">
+    <!-- Hard Shadow -->
+    <rect x="5" y="5" width="260" height="300" rx="15" fill="#EEEEEE"/>
+    <!-- Main Box -->
+    <rect width="260" height="300" rx="15" fill="#FFFFFF" stroke="#2196F3" stroke-width="3"/>
+    
+    <!-- Header -->
+    <g transform="translate(20, 20)">
+        <circle cx="20" cy="20" r="20" fill="#2196F3"/>
+        <text x="10" y="27" font-size="20">🤖</text>
+        <text x="50" y="18" fill="#333" font-size="16" font-weight="bold">Christmas Agent</text>
+        <text x="50" y="38" fill="#666" font-size="12">The "Brain"</text>
+    </g>
+    
+    <!-- Sub-box: Instruction -->
+    <g transform="translate(20, 70)">
+        <rect width="220" height="40" rx="8" fill="#E3F2FD" stroke="#90CAF9"/>
+        <text x="70" y="25" fill="#1565C0" font-size="12" font-weight="bold" text-anchor="middle" transform="translate(40,0)">Instruction: "Be Festive!"</text>
+    </g>
+    
+    <!-- Tools List -->
+    <text x="25" y="140" fill="#333" font-size="12" font-weight="bold">Tools:</text>
+    <text x="25" y="160" fill="#555" font-size="11">• update_tree_config()</text>
+    <text x="25" y="180" fill="#555" font-size="11">• get_tree_state()</text>
+    <text x="25" y="200" fill="#555" font-size="11">• mcp_toolset() 🔌</text>
+
+    <!-- Logic -->
+    <text x="25" y="235" fill="#333" font-size="12" font-weight="bold">Actions:</text>
+    <text x="25" y="255" fill="#555" font-size="11">• Reason about user intent</text>
+    <text x="25" y="275" fill="#555" font-size="11">• Call tools & generate response</text>
+  </g>
+
+  <!-- Connector: Agent to MCP -->
+  <path d="M 710 370 L 760 370" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+
+  <!-- 2c. MCP Pipeline (Dark Box) -->
+  <g transform="translate(760, 220)">
+    <!-- Hard Shadow -->
+    <rect x="5" y="5" width="380" height="350" rx="15" fill="#CFD8DC"/>
+    <!-- Main Box -->
+    <rect width="380" height="350" rx="15" fill="#37474F" stroke="#263238" stroke-width="2"/>
+    
+    <text x="190" y="35" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">MCP TOOLING PIPELINE</text>
+    <line x1="20" y1="50" x2="360" y2="50" stroke="#546E7A" stroke-width="1"/>
+
+    <!-- Inner Box 1: Image Gen (Purple) -->
+    <g transform="translate(20, 70)">
+        <rect width="160" height="250" rx="10" fill="#FFFFFF" stroke="#AB47BC" stroke-width="2"/>
+        
+        <g transform="translate(15, 15)">
+             <circle cx="15" cy="15" r="15" fill="#AB47BC"/>
+             <text x="5" y="21" font-size="16">🎨</text>
+             <text x="40" y="15" fill="#333" font-size="13" font-weight="bold">Image Tools</text>
+             <text x="40" y="30" fill="#666" font-size="10">Generative Logic</text>
+        </g>
+        
+        <text x="15" y="70" fill="#555" font-size="10" font-weight="bold">Functions:</text>
+        <text x="15" y="90" fill="#666" font-size="10">• generate_holiday_scene</text>
+        <text x="15" y="110" fill="#666" font-size="10">• generate_sweater</text>
+        <text x="15" y="130" fill="#666" font-size="10">• generate_final_photo</text>
+
+        <!-- State Pill -->
+        <g transform="translate(10, 190)">
+            <rect width="140" height="40" rx="20" fill="#F3E5F5" stroke="#AB47BC"/>
+             <text x="70" y="25" fill="#7B1FA2" font-size="10" text-anchor="middle" font-weight="bold">Output: generated.png</text>
+        </g>
+    </g>
+
+    <!-- Arrow between inner boxes -->
+    <path d="M 180 195 L 200 195" stroke="#CFD8DC" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Inner Box 2: Analysis (Green) -->
+    <g transform="translate(200, 70)">
+        <rect width="160" height="250" rx="10" fill="#FFFFFF" stroke="#66BB6A" stroke-width="2"/>
+        
+        <g transform="translate(15, 15)">
+             <circle cx="15" cy="15" r="15" fill="#66BB6A"/>
+             <text x="5" y="21" font-size="16">👤</text>
+             <text x="40" y="15" fill="#333" font-size="13" font-weight="bold">Analysis</text>
+             <text x="40" y="30" fill="#666" font-size="10">Vision Logic</text>
+        </g>
+        
+        <text x="15" y="70" fill="#555" font-size="10" font-weight="bold">Functions:</text>
+        <text x="15" y="90" fill="#666" font-size="10">• analyze_person</text>
+        <text x="15" y="110" fill="#666" font-size="10">• suggest_texture</text>
+
+         <!-- State Pill -->
+        <g transform="translate(10, 190)">
+            <rect width="140" height="40" rx="20" fill="#E8F5E9" stroke="#66BB6A"/>
+             <text x="70" y="25" fill="#388E3C" font-size="10" text-anchor="middle" font-weight="bold">Output: Description</text>
+        </g>
+    </g>
+  </g>
+
+
+  <!-- =========================================
+       3. INFRA LAYER (Detailed)
+       ========================================= -->
+  
+  <!-- Vertical connector from Agent to Infra (Memory) -->
+  <line x1="580" y1="520" x2="580" y2="620" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Vertical connector from MCP to Infra (Models) -->
+  <line x1="950" y1="570" x2="950" y2="620" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Agent Engine Box (Container) -->
+  <g transform="translate(150, 620)">
+    <!-- Hard Shadow -->
+    <rect x="5" y="5" width="990" height="150" rx="15" fill="#E1F5FE"/>
+    <!-- Main Box -->
+    <rect width="990" height="150" rx="15" fill="#FFFFFF" stroke="#0277BD" stroke-width="3"/>
+    
+    <!-- Title Area (Left) -->
+    <g transform="translate(0, 0)">
+       <path d="M 15 0 A 15 15 0 0 0 0 15 L 0 135 A 15 15 0 0 0 15 150 L 250 150 L 250 0 Z" fill="#E1F5FE"/>
+       
+       <circle cx="125" cy="50" r="30" fill="#0277BD"/>
+       <text x="110" y="60" fill="#FFF" font-size="30">⚡</text>
+       
+       <text x="125" y="100" fill="#01579B" font-size="18" font-weight="bold" text-anchor="middle">Agent Engine</text>
+       <text x="125" y="120" fill="#0288D1" font-size="12" text-anchor="middle">Vertex AI Runtime</text>
+    </g>
+    
+    <!-- Vertical Separator -->
+    <line x1="250" y1="20" x2="250" y2="130" stroke="#B3E5FC" stroke-width="2"/>
+
+    <!-- MEMORY BANK EMPHASIS (Center-Left) -->
+    <g transform="translate(280, 20)">
+         <!-- Container for Memory Bank -->
+         <rect width="400" height="110" rx="10" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+         
+         <g transform="translate(20, 20)">
+             <circle cx="25" cy="25" r="20" fill="#43A047"/>
+             <text x="13" y="32" font-size="20">🧠</text>
+             <text x="55" y="25" fill="#1B5E20" font-size="18" font-weight="bold">Memory Bank</text>
+             <text x="55" y="45" fill="#2E7D32" font-size="12">(Long-term Context)</text>
+         </g>
+
+         <!-- Topics -->
+         <g transform="translate(20, 75)">
+            <rect width="110" height="25" rx="5" fill="#C8E6C9" stroke="#43A047"/>
+            <text x="55" y="17" fill="#1B5E20" font-size="10" text-anchor="middle" font-weight="bold">Topics: Sweaters</text>
+            
+            <rect x="120" width="110" height="25" rx="5" fill="#C8E6C9" stroke="#43A047"/>
+            <text x="175" y="17" fill="#1B5E20" font-size="10" text-anchor="middle" font-weight="bold">Topics: Hobbies</text>
+            
+            <rect x="240" width="110" height="25" rx="5" fill="#C8E6C9" stroke="#43A047"/>
+            <text x="295" y="17" fill="#1B5E20" font-size="10" text-anchor="middle" font-weight="bold">History</text>
+         </g>
+    </g>
+    
+    <!-- MODEL ENDPOINT (Right) -->
+    <g transform="translate(710, 20)">
+        <rect width="250" height="110" rx="10" fill="#FFF8E1" stroke="#FFA000" stroke-width="2"/>
+         <g transform="translate(20, 20)">
+             <circle cx="25" cy="25" r="20" fill="#FFB300"/>
+             <text x="13" y="32" font-size="20">✨</text>
+             <text x="55" y="25" fill="#E65100" font-size="18" font-weight="bold">Gemini 2.5</text>
+             <text x="55" y="45" fill="#EF6C00" font-size="12">Flash Model</text>
+         </g>
+         
+         <text x="20" y="85" fill="#666" font-size="11">Used by Agent for reasoning</text>
+         <text x="20" y="100" fill="#666" font-size="11">& Memory for digesting info.</text>
+    </g>
+  </g>
+
+  <!-- Connection: Memory to Gemini -->
+  <path d="M 680 675 L 710 675" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Observability Section -->
+  <g transform="translate(600, 785)">
+      <rect width="200" height="30" rx="5" fill="#E8F5E9" stroke="#4CAF50"/>
+      <text x="100" y="20" fill="#2E7D32" font-size="12" font-weight="bold" text-anchor="middle">Deployed with --trace_to_cloud</text>
+  </g>
+  
+  <!-- Flow lines to Memory -->
+  <!-- Line from Backend to Memory Bank -->
+  <path d="M 400 440 L 400 500 L 500 500 L 500 635" fill="none" stroke="#2E7D32" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <rect x="420" y="480" width="140" height="20" rx="4" fill="#FFFFFF" stroke="#2E7D32"/>
+  <text x="490" y="494" fill="#2E7D32" font-size="10" text-anchor="middle" font-weight="bold">Writes to Memory</text>
+
+</svg>

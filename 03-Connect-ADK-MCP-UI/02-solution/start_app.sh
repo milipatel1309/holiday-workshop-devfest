@@ -64,9 +64,6 @@ fi
 
 echo "📦 Checking Backend Dependencies..."
 cd "$PROJECT_ROOT/backend"
-if [ -f .env ]; then
-    source .env
-fi
 uv sync
 
 echo "🚀 Starting Backend..."

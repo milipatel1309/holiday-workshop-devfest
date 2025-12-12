@@ -215,6 +215,29 @@ async def get_state():
     from agent import get_tree_state
     return get_tree_state()
 
+@app.get("/api/photos")
+async def get_photos():
+    """
+    Returns a list of image URLs from the static directory.
+    """
+    image_extensions = {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+    static_dir = "static"
+    photos = []
+    
+    # Base URL for static files (relative to current origin)
+    base_url = "/static/"
+    
+    if os.path.exists(static_dir):
+        # Walk through the directory to find images
+        # Note: simplistic approach, just top level or recursive? 
+        # User request implies simplistic "the tree hanging picture from backend/static"
+        # Let's support top level files in static/
+        for filename in os.listdir(static_dir):
+            if any(filename.lower().endswith(ext) for ext in image_extensions):
+                photos.append(f"{base_url}{filename}")
+                
+    return photos
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
