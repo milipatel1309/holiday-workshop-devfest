@@ -22,6 +22,27 @@ if not PROJECT_ID:
     raise ValueError("PROJECT_ID not found in environment variables.")
 
 # TODO: Set Up Configuration
+# Basic configuration types
+MemoryBankConfig = types.ReasoningEngineContextSpecMemoryBankConfig
+SimilaritySearchConfig = (
+    types.ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig
+)
+GenerationConfig = types.ReasoningEngineContextSpecMemoryBankConfigGenerationConfig
+
+# Advanced configuration types
+CustomizationConfig = types.MemoryBankCustomizationConfig
+MemoryTopic = types.MemoryBankCustomizationConfigMemoryTopic
+CustomMemoryTopic = types.MemoryBankCustomizationConfigMemoryTopicCustomMemoryTopic
+GenerateMemoriesExample = types.MemoryBankCustomizationConfigGenerateMemoriesExample
+ConversationSource = (
+    types.MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSource
+)
+ConversationSourceEvent = (
+    types.MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSourceEvent
+)
+ExampleGeneratedMemory = (
+    types.MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory
+)
 
 Content = genai_types.Content
 Part = genai_types.Part
@@ -39,6 +60,41 @@ def register_agent_engine():
     logger.info("Defining custom topics...")
     
     # TODO: Set up topic
+    custom_topics = [
+        # Topic 1: Sweater Preference
+        MemoryTopic(
+            custom_memory_topic=CustomMemoryTopic(
+                label="sweater_preference",
+                description="""Extract the user's preferences for sweater styles, patterns, and designs. Include:
+                - Specific patterns (snowflake, reindeer, geometric, fair isle, solid, etc.)
+                - Style preferences (chunky knit, cardigan, pullover, turtleneck, oversized, fitted)
+                - Color preferences (red, green, navy, pastel, etc.)
+                - Material preferences if mentioned (wool, cotton, cashmere, itchy/soft)
+                - Themes (retro, modern, ugly christmas sweater, elegant)
+
+                Example: "User wants a retro style sweater with a pixelated reindeer pattern."
+                Example: "User prefers dark blue colors and hates itchy wool."
+                """,
+            )
+        ),
+        # Topic 2: Personal Context
+        MemoryTopic(
+            custom_memory_topic=CustomMemoryTopic(
+                label="personal_context",
+                description="""Extract the user's personal context including hobbies, pets, interests, job, and preferred scenes. Include:
+                - Hobbies and activities (skiing, reading, gaming, cooking, etc.)
+                - Pets (type, breed, name, color)
+                - Job or profession if relevant to their style
+                - General interests (sci-fi, nature, vintage, tech)
+                - Preferred scenes or vibes (cozy fireplace, snowy mountain, cyberpunk city, beach)
+
+                Example: "User has a golden retriever named Max."
+                Example: "User loves skiing and wants a snowy mountain background."
+                Example: "User is a software engineer who likes cyberpunk aesthetics."
+                """,
+            )
+        )
+    ]
 
     # --- Define Few-Shot Examples ---
     logger.info("Defining few-shot examples...")
@@ -115,7 +171,20 @@ def register_agent_engine():
     logger.info(f"Creating/Registering Agent Engine: {AGENT_DISPLAY_NAME}")
     
     # TODO: Create Agent Engine
-
+    agent_engine = client.agent_engines.create(
+        config={
+            "display_name": AGENT_DISPLAY_NAME,
+            "context_spec": {
+                "memory_bank_config": {
+                    "generation_config": {
+                        "model": f"projects/{PROJECT_ID}/locations/{LOCATION}/publishers/google/models/gemini-2.5-flash"
+                    },
+                    "customization_configs": [customization_config]
+                }
+            },
+        }
+    )
+    
     agent_engine_id = agent_engine.api_resource.name.split("/")[-1]
     logger.info("✅ Agent Engine Registered Successfully!")
     logger.info(f"Agent Engine ID: {agent_engine_id}")

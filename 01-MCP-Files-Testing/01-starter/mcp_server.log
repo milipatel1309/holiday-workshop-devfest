@@ -1,0 +1,68 @@
+2025-12-19 19:43:49,199 - docket.worker - INFO - Starting worker 'cs-193116483855-default#11920' with the following tasks:
+2025-12-19 19:43:49,199 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:43:49,199 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:43:49,199 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:43:49,244 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-12-19 19:43:49,249 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:43:49,275 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-12-19 19:48:11,954 - docket.worker - INFO - Starting worker 'cs-193116483855-default#13519' with the following tasks:
+2025-12-19 19:48:12,057 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:48:12,057 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:48:12,057 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:48:12,083 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-12-19 19:48:12,088 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:48:12,110 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-12-19 19:48:48,638 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:48:48,638 - __main__ - INFO - Generating image with prompt: 
+        Create a cozy, high-fidelity 3D render of...
+2025-12-19 19:48:48,638 - __main__ - INFO - Output path: static/generated_scene.png
+2025-12-19 19:48:48,639 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:48:56,181 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:49:00,850 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:49:00,852 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 19:49:00,852 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 19:49:00,853 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:49:07,180 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:49:12,631 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:49:12,631 - __main__ - INFO - Generating image with prompt: 
+        Generate a cute, kawaii, cartoon-style 3D...
+2025-12-19 19:49:12,632 - __main__ - INFO - Output path: static/generated_selfie.png
+2025-12-19 19:49:12,791 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:49:21,589 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:49:25,697 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:49:25,697 - __main__ - INFO - Generating image with prompt: 
+        Generate a photorealistic close-up shot o...
+2025-12-19 19:49:25,698 - __main__ - INFO - Output path: static/generated_final_photo.png
+2025-12-19 19:49:25,699 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:49:37,323 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:49:46,620 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:49:46,621 - __main__ - INFO - Generating image with prompt: 
+        Create a cozy, high-fidelity 3D render of...
+2025-12-19 19:49:46,621 - __main__ - INFO - Output path: static/generated_scene.png
+2025-12-19 19:49:46,621 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:49:53,826 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:49:57,352 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:49:57,353 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 19:49:57,353 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 19:49:57,353 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:50:03,364 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:50:07,351 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:50:07,352 - __main__ - INFO - Generating image with prompt: 
+        Generate a cute, kawaii, cartoon-style 3D...
+2025-12-19 19:50:07,352 - __main__ - INFO - Output path: static/generated_selfie.png
+2025-12-19 19:50:07,352 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:50:35,443 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:50:38,925 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:50:38,925 - __main__ - INFO - Generating image with prompt: 
+        Generate a photorealistic close-up shot o...
+2025-12-19 19:50:38,925 - __main__ - INFO - Output path: static/generated_final_photo.png
+2025-12-19 19:50:38,926 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:50:56,618 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:52:28,458 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:52:28,458 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 19:52:28,458 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 19:52:28,459 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:52:34,553 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"

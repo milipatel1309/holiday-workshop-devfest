@@ -69,3 +69,41 @@ Traceback (most recent call last):
 google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND', 'details': [{'@type': 'type.googleapis.com/google.rpc.DebugInfo', 'detail': '[ORIGINAL ERROR] generic::not_found: models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods. [google.rpc.error_details_ext] { message: "models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods." details { type_url: "type.googleapis.com/language_labs.genai.debug.GeminiApiDebugInfo" value: ":0\\n\\035models/gemini-2.5-flash-image\\022\\006v1beta\\032\\007predict" } }'}]}}
 2025-12-01 13:57:27,817 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
 2025-12-01 13:57:30,031 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:00,466 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:16,016 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:16,024 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:16:16,041 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:21,324 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:21,331 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:16:21,332 - __main__ - INFO - Analyzing person features from: /home/milipatel0202/holiday_workshop/03-Connect-ADK-MCP-UI/01-starter/backend/static/uploads/cat.jpg
+2025-12-19 20:16:21,588 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:16:42,228 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:16:42,230 - __main__ - INFO - Person description: A young character with short, striped brown and black hair, bright green eyes, perky cat ears, delicate whisker markings, and a white V-shaped pattern on their chest.
+2025-12-19 20:16:42,243 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:44,931 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:44,937 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:16:44,938 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:16:44,938 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:16:44,948 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:16:51,067 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:16:51,375 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:53,212 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:16:53,217 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:16:53,218 - __main__ - INFO - Analyzing person features from: /home/milipatel0202/holiday_workshop/03-Connect-ADK-MCP-UI/01-starter/backend/static/uploads/cat.jpg
+2025-12-19 20:16:53,218 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:17:00,171 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:17:00,174 - __main__ - INFO - Person description: The image provided is of a cat, not a person. However, to create a cute, kawaii avatar inspired by this cat's features:
+
+1.  **Gender and approximate age group:** A young adult cat.
+2.  **Hair color, length, and style:** Short, brown, black, and grey striped tabby fur with a prominent white chest and paws.
+3.  **Eye color (if visible) and glasses (if worn):** Bright green eyes; no glasses.
+4.  **Facial hair (if any):** Long white whiskers.
+5.  **Distinctive features:** Upright, pointed ears; a white bib-like marking on the chest; and white "socks" on its paws.
+2025-12-19 20:17:00,174 - __main__ - INFO - Generating image with prompt: 
+        Generate a cute, kawaii, cartoon-style 3D...
+2025-12-19 20:17:00,174 - __main__ - INFO - Output path: static/generated_selfie.png
+2025-12-19 20:17:00,175 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:17:08,976 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:17:09,249 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:17:11,034 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

@@ -69,3 +69,55 @@ Traceback (most recent call last):
 google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND', 'details': [{'@type': 'type.googleapis.com/google.rpc.DebugInfo', 'detail': '[ORIGINAL ERROR] generic::not_found: models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods. [google.rpc.error_details_ext] { message: "models/gemini-2.5-flash-image is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods." details { type_url: "type.googleapis.com/language_labs.genai.debug.GeminiApiDebugInfo" value: ":0\\n\\035models/gemini-2.5-flash-image\\022\\006v1beta\\032\\007predict" } }'}]}}
 2025-12-01 13:57:27,817 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
 2025-12-01 13:57:30,031 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:25:40,736 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:25:42,393 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:25:42,763 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:25:42,763 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:25:42,764 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:25:42,776 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:25:52,382 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 429 Too Many Requests"
+2025-12-19 20:25:52,930 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:25:54,530 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:26:57,679 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:26:59,555 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:26:59,920 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:26:59,920 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:26:59,920 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:26:59,921 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:27:06,133 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:27:06,838 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:27:08,269 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:27:30,761 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:27:32,287 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:27:32,655 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:27:32,656 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:27:32,656 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:27:32,657 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:27:42,321 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:27:43,024 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:27:44,333 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:31:49,741 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:31:52,317 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:32:24,828 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:32:32,756 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:32:33,157 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:32:33,157 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:32:33,158 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:32:33,158 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:32:45,672 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 20:32:46,341 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:32:47,694 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:35:38,217 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:35:39,858 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:35:40,228 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 20:35:40,228 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 20:35:40,228 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 20:35:40,229 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 20:35:41,161 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 429 Too Many Requests"
+2025-12-19 20:35:41,444 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 20:35:43,478 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest

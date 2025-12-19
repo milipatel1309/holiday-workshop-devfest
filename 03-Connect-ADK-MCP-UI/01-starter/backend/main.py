@@ -70,8 +70,18 @@ class ChatResponse(BaseModel):
     generated_image: Optional[str] = None
   
 # TODO: Create Session Service
+from google.adk.sessions import InMemorySessionService
+from google.adk.memory import InMemoryMemoryService
+session_service = InMemorySessionService()
+memory_service = InMemoryMemoryService()
 
 # TODO: Initialize Runner
+runner = Runner(
+    app_name="agents",
+    agent=christmas_agent,
+    session_service=session_service,
+    memory_service=memory_service,
+)
 
 # Global variable to store the current session ID
 CURRENT_SESSION_ID = None

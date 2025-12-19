@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 2
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.14'",
@@ -82,6 +82,7 @@ dependencies = [
     { name = "fastmcp" },
     { name = "google-adk" },
     { name = "google-genai" },
+    { name = "mcp" },
     { name = "pillow" },
     { name = "pydantic" },
     { name = "python-dotenv" },
@@ -95,6 +96,7 @@ requires-dist = [
     { name = "fastmcp" },
     { name = "google-adk", specifier = ">=1.18.0" },
     { name = "google-genai" },
+    { name = "mcp", specifier = ">=1.1.2" },
     { name = "pillow" },
     { name = "pydantic", specifier = ">=2.12.5" },
     { name = "python-dotenv", specifier = ">=1.2.1" },

@@ -58,7 +58,20 @@ def generate_holiday_scene(interest: str) -> str:
     """
     
     #REPLACE_GENERATE_HOLIDAY_SCENE
-
+    prompt = (
+        f"""
+        Create a cozy, high-fidelity 3D render of a winter holiday scene.
+        The scene should be warm and inviting with soft cinematic lighting.
+        
+        Seamlessly integrate the following specific theme/interest into the 
+        holiday decor or landscape: {interest}.
+        
+        The style should be whimsical but detailed.
+        Aspect Ratio: 16:9 Landscape.
+        """
+    )
+    generate_image(prompt, "16:9", "static/generated_scene.png")
+    return "Done! Saved at generated_scene.png"
 @mcp.tool
 def generate_sweater_pattern(motif: str) -> str:
     """
@@ -161,6 +174,24 @@ def generate_final_photo() -> str:
     """
     
     #REPLACE_GENERATE_FINAL_PHOTO
+    prompt = (
+        """
+        Generate a photorealistic close-up shot of a rustic wooden fireplace mantle.
+        
+        Lighting: Warm, glowing ambient light from a fire below (out of frame).
+        Background: Softly blurred (bokeh) pine garland and twinkling lights.
+        
+        Foreground Composition:
+        1. A wooden picture frame containing the [attached selfie image]. 
+           The face in the photo must be clearly visible.
+        2. A folded holiday greeting card standing upright next to the frame. 
+           The front of the card displays the [attached holiday scene image] as a print.
+           
+        Ensure the perspective is grounded and realistic, as if taken with a 50mm lens.
+        """
+    )
+    generate_image(prompt, "16:9", "static/generated_final_photo.png", ["static/generated_selfie.png", "static/generated_scene.png"])
+    return "Done! Saved at generated_final_photo.png"
 
 if __name__ == "__main__":
     mcp.run()

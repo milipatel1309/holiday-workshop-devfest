@@ -78,6 +78,13 @@ USE_MEMORY_BANK = os.getenv("USE_MEMORY_BANK", "false").lower() == "true"
 if USE_MEMORY_BANK and AGENT_ENGINE_ID:
     logger.info(f"Using Agent Engine ID: {AGENT_ENGINE_ID}")
     # TODO: Create Vertex AI Session Service & Memory Bank Service
+    session_service = VertexAiSessionService(
+        project=PROJECT_ID, location=LOCATION, agent_engine_id=AGENT_ENGINE_ID
+    )
+    memory_service = VertexAiMemoryBankService(
+        project=PROJECT_ID, location=LOCATION, agent_engine_id=AGENT_ENGINE_ID
+    )
+
 else:
     if not USE_MEMORY_BANK:
         logger.info("USE_MEMORY_BANK is false. Using InMemory services.")

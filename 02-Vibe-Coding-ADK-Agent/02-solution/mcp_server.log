@@ -1,0 +1,57 @@
+2025-12-19 19:58:17,961 - docket.worker - INFO - Starting worker 'cs-193116483855-default#19621' with the following tasks:
+2025-12-19 19:58:17,962 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:58:17,963 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:58:17,966 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:58:17,991 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:19,620 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:36,029 - docket.worker - INFO - Starting worker 'cs-193116483855-default#19746' with the following tasks:
+2025-12-19 19:58:36,129 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:58:36,129 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:58:36,129 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:58:36,146 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:37,201 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:37,220 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:58:37,220 - __main__ - INFO - Generating image with prompt: 
+        Create a cozy, high-fidelity 3D render of...
+2025-12-19 19:58:37,221 - __main__ - INFO - Output path: static/generated_scene.png
+2025-12-19 19:58:37,221 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:58:44,429 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:58:44,692 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:56,646 - docket.worker - INFO - Starting worker 'cs-193116483855-default#19881' with the following tasks:
+2025-12-19 19:58:56,748 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:58:56,748 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:58:56,748 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:58:56,766 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:57,753 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:58:57,773 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-19 19:58:57,774 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2025-12-19 19:58:57,774 - __main__ - INFO - Output path: static/generated_pattern.png
+2025-12-19 19:58:57,774 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-12-19 19:59:04,056 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/christmas-onbo6v53n1ytltg0sr39/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2025-12-19 19:59:04,369 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:04,374 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:04,410 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:11,580 - docket.worker - INFO - Starting worker 'cs-193116483855-default#19985' with the following tasks:
+2025-12-19 19:59:11,687 - docket.worker - INFO - * trace(message: str, ...)
+2025-12-19 19:59:11,687 - docket.worker - INFO - * fail(message: str, ...)
+2025-12-19 19:59:11,688 - docket.worker - INFO - * sleep(seconds: float, ...)
+2025-12-19 19:59:11,703 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:11,705 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:21,524 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:22,540 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:22,873 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:23,088 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:23,310 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:23,515 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:24,210 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:24,360 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:24,504 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:24,655 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:24,782 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:43,273 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:43,456 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:43,634 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:43,851 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:44,020 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-19 19:59:44,172 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
